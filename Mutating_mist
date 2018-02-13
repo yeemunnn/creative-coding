@@ -1,0 +1,20 @@
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  background(0);
+  frameRate(5);
+}
+
+function draw() {
+  strokeWeight(0);
+  translate(random(width*(1/3),width*(2/3)), random(height*(1/3),height*(2/3)));
+  rotate(random(PI));
+  fill(random(200), random(255), random(255), 5);
+  beginShape();
+  for (var i = 0; i < 100; i++) {
+    var radius = windowWidth/12 + random(100);
+    var x = cos(radians(i * 36)) * radius;
+    var y = sin(radians(i * 36)) * radius;
+    vertex(x, y);
+  }
+  endShape();
+}

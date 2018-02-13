@@ -1,0 +1,57 @@
+var angle = 0.0;
+var scalar = 80;
+var speed = 0;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+  background(0);
+  strokeWeight(0);
+  function drawEllipse(x, y) {
+    var offsetX = width/2;
+    var offsetY = height/2;
+    var y1 = offsetY + sin(angle + y) * scalar;
+    var x1 = offsetX + cos(angle + x) * scalar;
+    fill(255,random(x,255),random(x,255));
+    speed = random(0.0008,0.0005);
+    ellipse(x1, y1, 5, 5);
+    angle += speed;
+  }
+
+  drawEllipse(1,0);
+  drawEllipse(2,0.03);
+  drawEllipse(3,0.1);
+  drawEllipse(4,0.2);
+  drawEllipse(5,0.3);
+  drawEllipse(6,0.4);
+  drawEllipse(7,0.5);
+  drawEllipse(8,0.6);
+  drawEllipse(9,0.7);
+  drawEllipse(10,0.8);
+  drawEllipse(11,0.87);
+  drawEllipse(12,0.9);
+  drawEllipse(13,0.87);
+  drawEllipse(14,0.8);
+  drawEllipse(15,0.7);
+  drawEllipse(16,0.6);
+  drawEllipse(17,0.5);
+  drawEllipse(18,0.4);
+  drawEllipse(19,0.3);
+  drawEllipse(20,0.2);
+  drawEllipse(21,0.1);
+  drawEllipse(22,0.03);
+  drawEllipse(23,0);
+  drawEllipse(24,0.03);
+  drawEllipse(25,0.1);
+  drawEllipse(26,0.2);
+  drawEllipse(27,0.3);
+  drawEllipse(28,0.4);
+  drawEllipse(29,0.5);
+  drawEllipse(30,0.6);
+  drawEllipse(31,0.7);
+  drawEllipse(32,0.8);
+  drawEllipse(33,0.87);
+  drawEllipse(34,0.9);
+  drawEllipse(35,0.87);}

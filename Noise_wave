@@ -1,0 +1,22 @@
+var offset = 0;
+var anotheroffset = 0;
+
+function setup(){
+  createCanvas(windowWidth, windowHeight);
+  frameRate(10);
+}
+
+function draw(){
+  background (random(0,5),random(0,5),random(0,10));
+  for (var x=0; x<=width;x++){
+    var n = noise(offset);
+    noiseDetail(0.9,0.1);
+    offset = offset+0.03;
+    stroke(n*50,n*100,n*150);
+      ellipse(x,n*3+height/6,1,1);
+      ellipse(x,n*12+height/3,1,1.5);
+      ellipse(x,n*25+height/2,1,2.5);
+      ellipse(x,n*50+height/1.5,1,1.5);
+      ellipse(x,n*100+height/1.2,1,1);
+  }
+}
